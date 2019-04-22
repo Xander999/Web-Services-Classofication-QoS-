@@ -1,0 +1,32 @@
+
+#Converting Raw txt file to .csv file......XANDER Style using pandas
+
+import pandas as pd
+
+data = pd.read_csv('data.txt', sep=",", header=None)
+data.columns = ["Response Time", "Availability", "Throughput", "Successability","Reliability","Compilance","Best Practices","Latency","Documentaion","WsRF","Class","Name","WSDL"]
+
+data.to_csv("/home/xander999/PROJECTS/CLOUD_COMPUTING/algorithm_dataset/data1.csv")
+
+
+# Details on columns:								
+# There are thirteen columns in this data set:					
+# 1: Response Time: time taken to send a request and receive a response (ms)	
+# 2: Availability: number of successful invocations/total invocations (%)	
+# 3: Throughput: total number of invocations for a given period of time (#/sec)	
+# 4: Successability: number of response / number of request messages (%)	
+# 5; Reliability: ratio of the number of error messages to total messages (%)	
+# 6: Compliance: extent a WSDL document follows WSDL spec. (%)			
+# 7: Best Practices: extent a Web service follows WS-I Basic Profile (%)	
+# 8: Latency: time taken for the server to process a given request (ms)		
+# 9: Documentation: measure of documentation (i.e. description tags) in WSDL (%)
+#10: WsRF: Web Service Relevancy Function: a rank for Web Service Quality (%)	
+#11: Class: levels representing service offering qualities (1 through 4) 	
+#12: Name: service name								
+#13: WSDL: WSDL file location							
+# For the purpose of this demo, only the selective properties are displayed
+
+#-----------------------------------------------
+
+# Class definition:  The 11th attribute represents various service offering 	
+# 		     differ in several Web Service Quality
