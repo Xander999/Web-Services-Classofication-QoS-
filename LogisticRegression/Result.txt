@@ -1,0 +1,2 @@
+  
+This folder contains various results produced from Logistic Regression algortihm.
